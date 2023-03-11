@@ -77,6 +77,6 @@ jobs:
           # Выполняет pull образа с DockerHub
           sudo docker pull luen96/infra_actions
           #остановка всех контейнеров
-          sudo docker stop $(sudo docker ps -aq)
+          sudo docker stop $(docker ps -a -q)
           sudo docker run --rm -d -p luen96/infra_actions 
 
